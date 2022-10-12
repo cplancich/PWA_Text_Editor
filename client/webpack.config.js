@@ -15,11 +15,11 @@ module.exports = () => {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
-    // TODO: Add and configure workbox plugins for a service worker and manifest file.
+    // : Add and configure workbox plugins for a service worker and manifest file.
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: '', 
+        title: 'Just Another Text Editor', 
       }),
 
       new InjectManifest({
@@ -28,12 +28,27 @@ module.exports = () => {
       }),
 
       new WebpackPwaManifest({
-
+        fingerprints: false,
+        inject: true,
+        name: 'Just Another Text Editor',
+        short_name: 'TextEditor',
+        description: 'Edit text, wow!',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
+        start_url: './',
+        publicPath: './',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ],
       }),
     ],
     
     module: {
-      // TODO: Add CSS loaders and babel to webpack.
+      // : Add CSS loaders and babel to webpack.
       rules: [
         {
           test: /\.css$/i,
