@@ -8,9 +8,6 @@ Just Another Text Editor (JATE), a downloadable progressive web application used
     
 * [Installation](#installation)
 * [Usage](#usage)
-* [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
 * [Contact](#contact)
 
 ## Installation
