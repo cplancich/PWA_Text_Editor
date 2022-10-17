@@ -2,7 +2,7 @@
 
 ## Description
     
-A downloadable progressive web application used for basic text exiting and word processing.
+Just Another Text Editor (JATE), a downloadable progressive web application used for basic text exiting and word processing.
     
 ## Table of Contents
     
